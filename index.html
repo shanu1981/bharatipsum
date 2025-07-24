@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bharat Ipsum - Indian alternative to Lorem Ipsum placeholder text." />
+  <title>Bharat Ipsum - Indian Lorem Ipsum</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .tri-saffron {
+      background: linear-gradient(to right, #FF9933, #FF6600);
+      color: #fff;
+      padding: 0 2px;
+      border-radius: 2px;
+    }
+    .tri-white {
+      /* keep default colors – represents the white band */
+    }
+    .tri-green {
+      background: linear-gradient(to right, #0f9d58, #138808);
+      color: #fff;
+      padding: 0 2px;
+      border-radius: 2px;
+    }
+    .selected {} /* logical marker, no visual style */
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
+
+  <!-- Hero -->
+  <header class="bg-gradient-to-r from-orange-500 to-red-500 text-white py-12 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold">Bharat Ipsum</h1>
+    <p class="text-lg mt-2 max-w-2xl mx-auto">
+      Why settle for meaningless Latin when you can fill your designs with the spirit of India? 
+      Bharat Ipsum — because placeholders deserve meaning too!
+    </p>
+  </header>
+
+  <!-- Control Bar -->
+  <div class="bg-gray-100 border-b border-gray-300 py-4 px-4 text-center shadow-sm">
+    <label for="paraCount" class="font-semibold mr-2">Number of paragraphs:</label>
+    <input 
+      type="number" 
+      id="paraCount" 
+      placeholder="0" 
+      min="1" 
+      max="30" 
+      class="border border-gray-400 rounded p-2 text-center w-20 mr-2" 
+      oninput="highlightParagraphs()" />
+    <button onclick="copyText()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">
+      Copy Text
+    </button>
+  </div>
+
+  <!-- Generator Content -->
+  <main class="flex-grow container mx-auto px-4 py-8">
+    <div id="bharatText" class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-lg leading-relaxed">
+      <p data-original="India is a land of diverse traditions, united in purpose and vision. From the Himalayas to Kanyakumari, every citizen contributes to the strength of this great nation. The rhythm of local festivals, the sounds of different languages, and the wisdom passed down through generations form the pulse of Bharat. Each village, town, and metropolis adds its own story to a collective narrative of progress and resilience. Bharat Ipsum stands on this very spirit—rooted, inclusive, and forward-looking.">
+        India is a land of diverse traditions, united in purpose and vision. From the Himalayas to Kanyakumari, every citizen contributes to the strength of this great nation. The rhythm of local festivals, the sounds of different languages, and the wisdom passed down through generations form the pulse of Bharat. Each village, town, and metropolis adds its own story to a collective narrative of progress and resilience. Bharat Ipsum stands on this very spirit—rooted, inclusive, and forward-looking.
+      </p>
+
+      <p data-original="Inspired by the sacrifices of our freedom fighters, we move forward with responsibility and pride. A self-reliant India is not just a dream — it's a mission we all share. Whether it is in science, space, sports, or startups, India’s youth are redefining possibilities every single day. The discipline of our armed forces, the dedication of our farmers, and the innovation of our creators together shape a confident future. These words, like our actions, aim to honor that legacy.">
+        Inspired by the sacrifices of our freedom fighters, we move forward with responsibility and pride. A self-reliant India is not just a dream — it's a mission we all share. Whether it is in science, space, sports, or startups, India’s youth are redefining possibilities every single day. The discipline of our armed forces, the dedication of our farmers, and the innovation of our creators together shape a confident future. These words, like our actions, aim to honor that legacy.
+      </p>
+
+      <p data-original="Our culture is a blend of heritage, knowledge, and progress. Bharat Ipsum reminds us of the values that define us as a nation of resilience and creativity. From the epics that teach ethics to the constitution that guarantees rights, our frameworks of thought are both ancient and modern. In these lines, you’ll find not just filler content, but phrases that echo unity, integrity, and growth — the very foundation of our national character.">
+        Our culture is a blend of heritage, knowledge, and progress. Bharat Ipsum reminds us of the values that define us as a nation of resilience and creativity. From the epics that teach ethics to the constitution that guarantees rights, our frameworks of thought are both ancient and modern. In these lines, you’ll find not just filler content, but phrases that echo unity, integrity, and growth — the very foundation of our national character.
+      </p>
+
+      <p data-original="From ancient wisdom to modern innovation, India continues to inspire the world with its unity, diversity, and vibrant spirit. Our classical arts coexist with cutting-edge technology, our local crafts thrive alongside global brands, and our spiritual depth cohabits with scientific temper. Bharat Ipsum channels that duality — a timeless, living culture that continuously evolves while remaining grounded.">
+        From ancient wisdom to modern innovation, India continues to inspire the world with its unity, diversity, and vibrant spirit. Our classical arts coexist with cutting-edge technology, our local crafts thrive alongside global brands, and our spiritual depth cohabits with scientific temper. Bharat Ipsum channels that duality — a timeless, living culture that continuously evolves while remaining grounded.
+      </p>
+
+      <p data-original="Every sunrise in India brings new opportunities to grow, evolve, and create. This is the heartbeat of Bharat — unstoppable and full of life. In classrooms and coworking spaces, in farms and factories, across screens and streets — dreams are being built, nurtured, and launched. With every paragraph, we celebrate this everyday energy that powers the nation's collective aspirations.">
+        Every sunrise in India brings new opportunities to grow, evolve, and create. This is the heartbeat of Bharat — unstoppable and full of life. In classrooms and coworking spaces, in farms and factories, across screens and streets — dreams are being built, nurtured, and launched. With every paragraph, we celebrate this everyday energy that powers the nation's collective aspirations.
+      </p>
+
+      <p data-original="Bharat Ipsum is crafted to inspire, just like the stories of India’s unsung heroes and visionaries who shaped this nation. Teachers in remote villages, doctors in crowded hospitals, engineers building bridges and code — all of them carry the flag of progress. These words attempt to reflect their grit, grace, and relentless spirit to move India forward.">
+        Bharat Ipsum is crafted to inspire, just like the stories of India’s unsung heroes and visionaries who shaped this nation. Teachers in remote villages, doctors in crowded hospitals, engineers building bridges and code — all of them carry the flag of progress. These words attempt to reflect their grit, grace, and relentless spirit to move India forward.
+      </p>
+
+      <p data-original="This text is more than filler — it is a celebration of India’s rich history, its vibrant culture, and its progressive dreams. It is a small tribute to those who fought for our freedom and those who now fight for our future. Embedded in every sentence is the idea of a nation that believes in equality, opportunity, and dignity for all.">
+        This text is more than filler — it is a celebration of India’s rich history, its vibrant culture, and its progressive dreams. It is a small tribute to those who fought for our freedom and those who now fight for our future. Embedded in every sentence is the idea of a nation that believes in equality, opportunity, and dignity for all.
+      </p>
+
+      <p data-original="From the Ganges to the deserts of Rajasthan, the spirit of India flows through every word of Bharat Ipsum. The monsoon skies, the winter fog, the summer heat, and the spring breeze — the climate of India’s culture is as dynamic as its people. With each passage, we attempt to capture that colorful complexity, that emotional depth, that uniquely Indian cadence.">
+        From the Ganges to the deserts of Rajasthan, the spirit of India flows through every word of Bharat Ipsum. The monsoon skies, the winter fog, the summer heat, and the spring breeze — the climate of India’s culture is as dynamic as its people. With each passage, we attempt to capture that colorful complexity, that emotional depth, that uniquely Indian cadence.
+      </p>
+
+      <p data-original="Our placeholders carry meaning, pride, and creativity — just like the people of this great country. They can be used in prototypes, presentations, mockups, and manuscripts with equal dignity. If design is communication, let your communication carry the warmth and courage of Bharat’s voice.">
+        Our placeholders carry meaning, pride, and creativity — just like the people of this great country. They can be used in prototypes, presentations, mockups, and manuscripts with equal dignity. If design is communication, let your communication carry the warmth and courage of Bharat’s voice.
+      </p>
+
+      <p data-original="Let every mockup you create reflect the vibrance of India with Bharat Ipsum as your companion. Together, let design and content carry a tricolor spirit — courage in saffron, peace in white, and growth in green. Stand tall, prototype boldly, and let your placeholders speak with pride.">
+        Let every mockup you create reflect the vibrance of India with Bharat Ipsum as your companion. Together, let design and content carry a tricolor spirit — courage in saffron, peace in white, and growth in green. Stand tall, prototype boldly, and let your placeholders speak with pride.
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 text-center py-6">
+    <p>🇮🇳 Made with pride in India | Bharat Ipsum © 2025</p>
+  </footer>
+
+  <script>
+    function restoreParagraph(p) {
+      if (p.dataset.original) {
+        p.innerHTML = p.dataset.original;
+      }
+      p.classList.remove('selected');
+    }
+
+    function triColorizeParagraph(p) {
+      const text = p.dataset.original || p.innerText;
+      if (!p.dataset.original) p.dataset.original = text;
+
+      const words = text.split(/\s+/);
+      const chunk = Math.ceil(words.length / 3);
+
+      const part1 = words.slice(0, chunk).join(' ');
+      const part2 = words.slice(chunk, chunk * 2).join(' ');
+      const part3 = words.slice(chunk * 2).join(' ');
+
+      p.innerHTML =
+        `<span class="tri-saffron">${part1}</span>` +
+        (part2 ? ` <span class="tri-white">${part2}</span>` : '') +
+        (part3 ? ` <span class="tri-green">${part3}</span>` : '');
+
+      p.classList.add('selected');
+    }
+
+    function highlightParagraphs() {
+      const count = parseInt(document.getElementById("paraCount").value, 10);
+      const paragraphs = document.querySelectorAll("#bharatText p");
+
+      // reset all
+      paragraphs.forEach(restoreParagraph);
+
+      if (!isNaN(count) && count > 0) {
+        for (let i = 0; i < count && i < paragraphs.length; i++) {
+          triColorizeParagraph(paragraphs[i]);
+        }
+      }
+    }
+
+    function copyText() {
+      const selected = Array.from(document.querySelectorAll("#bharatText p.selected"))
+        .map(p => (p.dataset.original || p.innerText).trim())
+        .join("\n\n");
+      if (selected) {
+        navigator.clipboard.writeText(selected);
+        alert("Selected text copied to clipboard!");
+      } else {
+        alert("Please select at least 1 paragraph.");
+      }
+    }
+  </script>
+</body>
+</html>
