@@ -1,0 +1,98 @@
+.font-dauphin {
+  font-family: 'Dauphin';
+}
+
+.bharat-para {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.tri-saffron {
+  background: linear-gradient(to right, #FF9933, #FF6600);
+  color: #fff;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.tri-green {
+  background: linear-gradient(to right, #0f9d58, #138808);
+  color: #fff;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.btn-blue {
+  background-color: #007ac8;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: background 0.3s;
+}
+
+.btn-black:hover {
+  background-color: #333;
+}
+
+.btn-green {
+  background-color: #36b37e;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+}
+
+.btn-green:hover {
+  background-color: #16a34a;
+}
+
+.input-field {
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  color: #000;
+}
+
+.output-box {
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  height: 12rem;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+.generator-box {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+#quoteSection {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+#quoteSection blockquote {
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+#quoteSection .quote-label {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: orange;
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}

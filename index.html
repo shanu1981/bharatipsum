@@ -3,157 +3,209 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Bharat Ipsum - Indian alternative to Lorem Ipsum placeholder text." />
+  <meta name="description"
+    content="Bharat Ipsum is a cultural alternative to Lorem Ipsum with Indian words, festivals, and heritage to give meaning to your designs.">
+  <meta name="keywords"
+    content="Bharat Ipsum, Indian Lorem Ipsum, Placeholder Text India, Ipsum Generator, Design Text Filler, India Culture Text">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Bharat Ipsum - Indian Placeholder Text">
+  <meta property="og:description"
+    content="Give meaning to your mockups with Bharat Ipsum, inspired by India's culture and heritage.">
+  <meta property="og:image" content="https://bharatipsum.com/og-image.png">
+  <meta property="og:url" content="https://bharatipsum.com">
+  <meta name="twitter:card" content="summary_large_image">
+
   <title>Bharat Ipsum - Indian Lorem Ipsum</title>
+
+  <link rel="canonical" href="https://bharatipsum.com/" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://db.onlinewebfonts.com/c/5ebc67ab9ab9e86517c65dd6ac7c85aa?family=Dauphin" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .tri-saffron {
-      background: linear-gradient(to right, #FF9933, #FF6600);
-      color: #fff;
-      padding: 0 2px;
-      border-radius: 2px;
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');  // Replace with your GA4 ID
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Bharat Ipsum",
+      "url": "https://bharatipsum.com/",
+      "description": "Bharat Ipsum is an Indian alternative to Lorem Ipsum text generator.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Bharat Ipsum"
+      }
     }
-    .tri-white {
-      /* keep default colors – represents the white band */
-    }
-    .tri-green {
-      background: linear-gradient(to right, #0f9d58, #138808);
-      color: #fff;
-      padding: 0 2px;
-      border-radius: 2px;
-    }
-    .selected {} /* logical marker, no visual style */
-  </style>
+  </script>
+
 </head>
+
 <body class="bg-white text-gray-800 font-sans flex flex-col min-h-screen">
 
-  <!-- Hero -->
+  <!-- Header -->
   <header class="bg-gradient-to-r from-orange-500 to-red-500 text-white py-12 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold">Bharat Ipsum</h1>
-    <p class="text-lg mt-2 max-w-2xl mx-auto">
-      Why settle for meaningless Latin when you can fill your designs with the spirit of India? 
-      Bharat Ipsum — because placeholders deserve meaning too!
+    <h1 class="text-4xl md:text-7xl font-bold">Bharat <span class="font-dauphin">Ipsum</span></h1>
+    <p class="text-lg mt-2 pb-4 max-w-2xl mx-auto">
+      Why settle for Latin when you can fill your designs with the spirit of India?
+      Bharat Ipsum soul of Indian languages, now in your placeholder text.
     </p>
+
+  <!-- New Quote Section -->
+
+  <!-- Quote of the Day -->
+<section id="quoteSection" class="max-w-2xl mx-auto mt-6 p-4 relative bg-white/5 rounded-md shadow-md text-center border border-white/10">
+  <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-100 to-orange-200 text-orange-700 px-3 py-0.5 text-[10px] font-semibold uppercase rounded-full shadow-sm tracking-wide">
+    Quote of the Day
+  </div>
+  <blockquote class="text-lg italic text-white leading-snug px-4" id="dailyQuote">
+    “Loading quote...”
+  </blockquote>
+  <p class="mt-2 text-xs text-white/70 font-medium" id="quoteAuthor"></p>
+</section>
+
   </header>
 
-  <!-- Control Bar -->
-  <div class="bg-gray-100 border-b border-gray-300 py-4 px-4 text-center shadow-sm">
-    <label for="paraCount" class="font-semibold mr-2">Number of paragraphs:</label>
-    <input 
-      type="number" 
-      id="paraCount" 
-      placeholder="0" 
-      min="1" 
-      max="30" 
-      class="border border-gray-400 rounded p-2 text-center w-20 mr-2" 
-      oninput="highlightParagraphs()" />
-    <button onclick="copyText()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">
-      Copy Text
-    </button>
-  </div>
-
-  <!-- Generator Content -->
+  <!-- Main Content -->
   <main class="flex-grow container mx-auto px-4 py-8">
     <div id="bharatText" class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-lg leading-relaxed">
-      <p data-original="India is a land of diverse traditions, united in purpose and vision. From the Himalayas to Kanyakumari, every citizen contributes to the strength of this great nation. The rhythm of local festivals, the sounds of different languages, and the wisdom passed down through generations form the pulse of Bharat. Each village, town, and metropolis adds its own story to a collective narrative of progress and resilience. Bharat Ipsum stands on this very spirit—rooted, inclusive, and forward-looking.">
-        India is a land of diverse traditions, united in purpose and vision. From the Himalayas to Kanyakumari, every citizen contributes to the strength of this great nation. The rhythm of local festivals, the sounds of different languages, and the wisdom passed down through generations form the pulse of Bharat. Each village, town, and metropolis adds its own story to a collective narrative of progress and resilience. Bharat Ipsum stands on this very spirit—rooted, inclusive, and forward-looking.
-      </p>
+      <!-- Left Section -->
+      <div class="section-container">
+        <h2 class="text-2xl leading-[24px] mb-4 flex items-center font-dauphin">
+          What is Bharat Ipsum?
+          <button class="ml-3 relative group paint-btn" type="button">
+            <!-- Paint Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500 hover:text-blue-600" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15.232 5.232a3 3 0 014.243 4.243l-9.193 9.193a4 4 0 01-1.414.94l-3.32 1.106a.75.75 0 01-.949-.949l1.106-3.32a4 4 0 01.94-1.414l9.193-9.193z" />
+            </svg>
+            <!-- Tooltip -->
+            <span
+              class="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 text-xs bg-gray-700 text-white rounded opacity-0 group-hover:opacity-100 transition">
+              Tricolor
+            </span>
+          </button>
+        </h2>
+        <p class="bharat-para text-base" data-original="Bharat Ipsum is not just placeholder text - it's a tribute to the vibrant heart of India. We have woven words from our 22 official Indian languages and countless dialects into one beautiful mix. From the lyrical sounds of the South to the bold tones of the North, from the sweetness of the East to the warmth of the West - every word in Bharat Ipsum carries a piece of our land's soul. Unlike the empty words of Lorem Ipsum, Bharat Ipsum celebrates unity in diversity. Each line is a colorful tapestry of India's cultural richness - the rhythm of our festivals, the wisdom of our heritage, the strength of our farmers, and the courage of our armed forces. It's a reminder that, while our languages may differ, the heart that beats within them is the same. Bharat Ipsum is playful, unpredictable, and proudly Indian. It's not meant to make sense, but to make you feel - just like the spirit of Bharat itself.">
+          <strong>Bharat Ipsum</strong> is not just placeholder text - it's a tribute to the vibrant heart of India. We
+          have woven words from our 22 official Indian languages and countless dialects into one beautiful mix. From the
+          lyrical sounds of the South to the bold tones of the North, from the sweetness of the East to the warmth of
+          the West - every word in Bharat Ipsum carries a piece of our land's soul. Unlike the empty words of Lorem
+          Ipsum, Bharat Ipsum celebrates unity in diversity. Each line is a colorful tapestry of India's cultural
+          richness - the rhythm of our festivals, the wisdom of our heritage, the strength of our farmers, and the
+          courage of our armed forces. It's a reminder that, while our languages may differ, the heart that beats within
+          them is the same. Bharat Ipsum is playful, unpredictable, and proudly Indian. It's not meant to make sense,
+          but to make you feel - just like the spirit of Bharat itself.
+        </p>
+      </div>
+      <!-- Right Section: Generator -->
+      <section id="generator" class="container mx-auto pl-2 pr-4 max-w-md">
+        <div class="generator-box">
+          <h3 class="text-2xl font-semibold mb-4 text-gray-900">Bharat Ipsum Generator</h3>
+          <div class="flex flex-wrap items-center gap-3 mb-4">
+            <input id="genCount" type="number" min="1" value="5" class="w-20 input-field" />
+            <select id="genType" class="flex-grow input-field">
+              <option value="paragraphs">Paragraphs</option>
+              <option value="sentences">Sentences</option>
+              <option value="words">Words</option>
+            </select>
+            <button id="genBtn" class="btn-blue">Generate</button>
+            <button id="copyBtn" class="btn-green">Copy</button>
+          </div>
+          <label class="flex items-center gap-2 mb-4 text-gray-700 text-sm">
+            <input type="checkbox" id="startWith" class="h-4 w-4 text-orange-500" checked>
+            Start with "Bharat ipsum dolor sit amet…"
+          </label>
+          <div id="genOutput" class="output-box"></div>
+        </div>
+      </section>
 
-      <p data-original="Inspired by the sacrifices of our freedom fighters, we move forward with responsibility and pride. A self-reliant India is not just a dream — it's a mission we all share. Whether it is in science, space, sports, or startups, India’s youth are redefining possibilities every single day. The discipline of our armed forces, the dedication of our farmers, and the innovation of our creators together shape a confident future. These words, like our actions, aim to honor that legacy.">
-        Inspired by the sacrifices of our freedom fighters, we move forward with responsibility and pride. A self-reliant India is not just a dream — it's a mission we all share. Whether it is in science, space, sports, or startups, India’s youth are redefining possibilities every single day. The discipline of our armed forces, the dedication of our farmers, and the innovation of our creators together shape a confident future. These words, like our actions, aim to honor that legacy.
-      </p>
+      <div>
+        <h2 class="text-2xl mb-4 font-dauphin">Why do we use Bharat Ipsum?</h2>
+        <p class="bharat-para text-base" data-original="Because ordinary placeholder text feels empty. Bharat Ipsum fills that space with the heartbeat of India -
+          words that echo our unity, diversity, and culture. We use Bharat Ipsum to bring color, character, and identity
+          to designs and mockups. It's a way of saying that even a placeholder can carry meaning and pride.
+          With 22 languages blending together, Bharat Ipsum reminds us that every voice matters, every culture adds
+          flavor, and every word has a story. It's not just text - it's a celebration of who we are, wrapped in the
+          beauty of India's languages.">
+          Because ordinary placeholder text feels empty. Bharat Ipsum fills that space with the heartbeat of India -
+          words that echo our unity, diversity, and culture. We use Bharat Ipsum to bring color, character, and identity
+          to designs and mockups. It's a way of saying that even a placeholder can carry meaning and pride.
+          With 22 languages blending together, Bharat Ipsum reminds us that every voice matters, every culture adds
+          flavor, and every word has a story. It's not just text - it's a celebration of who we are, wrapped in the
+          beauty of India's languages. “Many languages, one soul - that's Bharat Ipsum”
+        </p>
+      </div>
 
-      <p data-original="Our culture is a blend of heritage, knowledge, and progress. Bharat Ipsum reminds us of the values that define us as a nation of resilience and creativity. From the epics that teach ethics to the constitution that guarantees rights, our frameworks of thought are both ancient and modern. In these lines, you’ll find not just filler content, but phrases that echo unity, integrity, and growth — the very foundation of our national character.">
-        Our culture is a blend of heritage, knowledge, and progress. Bharat Ipsum reminds us of the values that define us as a nation of resilience and creativity. From the epics that teach ethics to the constitution that guarantees rights, our frameworks of thought are both ancient and modern. In these lines, you’ll find not just filler content, but phrases that echo unity, integrity, and growth — the very foundation of our national character.
-      </p>
+      <div>
+        <h2 class="text-2xl leading-[24px] mb-4 font-dauphin">Where does it come from?</h2>
+        <p class="bharat-para text-base" data-original="Bharat Ipsum originates from the heart of India's timeless culture, history, and values. It is inspired by the epics that teach wisdom, the constitution that ensures justice, and the voices of countless heroes who shaped the nation. Every word reflects the colors of our land, from the Himalayas to the Kanniyakumari, from vibrant festivals to the tireless spirit of its people. It comes from the idea that placeholder text can hold meaning, pride, and the story of a nation that continues to inspire the world.">
+          Bharat Ipsum is born from the heart of India – a land where 22 official languages and hundreds of dialects
+          weave stories of unity, culture, and pride. It draws inspiration from the chants of temples, the poetry of
+          rivers, the songs of farmers, and the spirit of festivals that light every corner of our nation.
+          It comes from the belief that even placeholder text can carry meaning – words that reflect courage, harmony,
+          and diversity. Each word in Bharat Ipsum is a fragment of India’s timeless heritage, from the serene Himalayas
+          to the vibrant coasts of Kanyakumari.
+          Bharat Ipsum is not just text; it is the rhythm of a billion voices saying, “We are one, even in our
+            differences.”
+        </p>
+      </div>
 
-      <p data-original="From ancient wisdom to modern innovation, India continues to inspire the world with its unity, diversity, and vibrant spirit. Our classical arts coexist with cutting-edge technology, our local crafts thrive alongside global brands, and our spiritual depth cohabits with scientific temper. Bharat Ipsum channels that duality — a timeless, living culture that continuously evolves while remaining grounded.">
-        From ancient wisdom to modern innovation, India continues to inspire the world with its unity, diversity, and vibrant spirit. Our classical arts coexist with cutting-edge technology, our local crafts thrive alongside global brands, and our spiritual depth cohabits with scientific temper. Bharat Ipsum channels that duality — a timeless, living culture that continuously evolves while remaining grounded.
-      </p>
+      <div>
+        <h2 class="text-2xl leading-[24px] mb-4 font-dauphin">Where can I get some?</h2>
+        <p class="bharat-para text-base" data-original="You can get Bharat Ipsum text directly from this website by selecting the number of paragraphs you need and copying them with a single click. It is designed to replace standard Lorem Ipsum with words that carry the essence of India. Whether for prototypes, mockups, or creative designs, Bharat Ipsum is always available here to bring cultural depth and pride to your content.">
+          Bharat Ipsum is available right here on our website through an easy-to-use Bharat Ipsum Generator. Simply
+          select how many words, sentences, or paragraphs you need, click on Generate, and instantly get text infused
+          with the spirit of India. With one click on Copy, your text is ready to paste directly into your designs,
+          mockups, or prototypes.
 
-      <p data-original="Every sunrise in India brings new opportunities to grow, evolve, and create. This is the heartbeat of Bharat — unstoppable and full of life. In classrooms and coworking spaces, in farms and factories, across screens and streets — dreams are being built, nurtured, and launched. With every paragraph, we celebrate this everyday energy that powers the nation's collective aspirations.">
-        Every sunrise in India brings new opportunities to grow, evolve, and create. This is the heartbeat of Bharat — unstoppable and full of life. In classrooms and coworking spaces, in farms and factories, across screens and streets — dreams are being built, nurtured, and launched. With every paragraph, we celebrate this everyday energy that powers the nation's collective aspirations.
-      </p>
+          This tool is built to replace the emptiness of Lorem Ipsum with a unique mix of Indian cultural essence.
+          Whether you're designing a website, creating a presentation, or working on a creative draft, Bharat Ipsum
+          ensures your placeholders carry a touch of meaning and identity.
+        </p>
+      </div>
 
-      <p data-original="Bharat Ipsum is crafted to inspire, just like the stories of India’s unsung heroes and visionaries who shaped this nation. Teachers in remote villages, doctors in crowded hospitals, engineers building bridges and code — all of them carry the flag of progress. These words attempt to reflect their grit, grace, and relentless spirit to move India forward.">
-        Bharat Ipsum is crafted to inspire, just like the stories of India’s unsung heroes and visionaries who shaped this nation. Teachers in remote villages, doctors in crowded hospitals, engineers building bridges and code — all of them carry the flag of progress. These words attempt to reflect their grit, grace, and relentless spirit to move India forward.
-      </p>
-
-      <p data-original="This text is more than filler — it is a celebration of India’s rich history, its vibrant culture, and its progressive dreams. It is a small tribute to those who fought for our freedom and those who now fight for our future. Embedded in every sentence is the idea of a nation that believes in equality, opportunity, and dignity for all.">
-        This text is more than filler — it is a celebration of India’s rich history, its vibrant culture, and its progressive dreams. It is a small tribute to those who fought for our freedom and those who now fight for our future. Embedded in every sentence is the idea of a nation that believes in equality, opportunity, and dignity for all.
-      </p>
-
-      <p data-original="From the Ganges to the deserts of Rajasthan, the spirit of India flows through every word of Bharat Ipsum. The monsoon skies, the winter fog, the summer heat, and the spring breeze — the climate of India’s culture is as dynamic as its people. With each passage, we attempt to capture that colorful complexity, that emotional depth, that uniquely Indian cadence.">
-        From the Ganges to the deserts of Rajasthan, the spirit of India flows through every word of Bharat Ipsum. The monsoon skies, the winter fog, the summer heat, and the spring breeze — the climate of India’s culture is as dynamic as its people. With each passage, we attempt to capture that colorful complexity, that emotional depth, that uniquely Indian cadence.
-      </p>
-
-      <p data-original="Our placeholders carry meaning, pride, and creativity — just like the people of this great country. They can be used in prototypes, presentations, mockups, and manuscripts with equal dignity. If design is communication, let your communication carry the warmth and courage of Bharat’s voice.">
-        Our placeholders carry meaning, pride, and creativity — just like the people of this great country. They can be used in prototypes, presentations, mockups, and manuscripts with equal dignity. If design is communication, let your communication carry the warmth and courage of Bharat’s voice.
-      </p>
-
-      <p data-original="Let every mockup you create reflect the vibrance of India with Bharat Ipsum as your companion. Together, let design and content carry a tricolor spirit — courage in saffron, peace in white, and growth in green. Stand tall, prototype boldly, and let your placeholders speak with pride.">
-        Let every mockup you create reflect the vibrance of India with Bharat Ipsum as your companion. Together, let design and content carry a tricolor spirit — courage in saffron, peace in white, and growth in green. Stand tall, prototype boldly, and let your placeholders speak with pride.
-      </p>
+      <div>
+        <h2 class="text-2xl leading-[24px] mb-4 font-dauphin">How is Bharat Ipsum different from Lorem Ipsum?</h2>
+        <p class="bharat-para text-base" data-original="Bharat Ipsum goes beyond the traditional concept of placeholder text. While Lorem Ipsum relies on random Latin words with no cultural or emotional connection, Bharat Ipsum draws inspiration from the richness of India. It brings together words from 22 Indian languages, symbolizing unity in diversity and reflecting the country’s heritage, traditions, and values. Every word is carefully chosen to add character and authenticity, ensuring that your designs carry a sense of identity and purpose rather than empty filler text.">
+          Bharat Ipsum goes beyond the traditional concept of placeholder text. While Lorem Ipsum relies on random Latin
+          words with no cultural or emotional connection, Bharat Ipsum draws inspiration from the richness of India. It
+          brings together words from 22 Indian languages, symbolizing unity in diversity and reflecting the country’s
+          heritage, traditions, and values. Every word is carefully chosen to add character and authenticity, ensuring
+          that your designs carry a sense of identity and purpose rather than empty filler text.
+        </p>
+      </div>
+    </div>
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 text-center py-6">
+<footer class="bg-gray-900 text-gray-300 text-sm mt-12">
+  <div class="max-w-6xl mx-auto px-4 py-6 text-center space-y-3">
     <p>🇮🇳 Made with pride in India | Bharat Ipsum © 2025</p>
-  </footer>
 
-  <script>
-    function restoreParagraph(p) {
-      if (p.dataset.original) {
-        p.innerHTML = p.dataset.original;
-      }
-      p.classList.remove('selected');
-    }
+    <p class="text-xs">
+      <a href="terms.html" class="underline hover:text-white">Terms &amp; Disclaimer</a>
+    </p>
 
-    function triColorizeParagraph(p) {
-      const text = p.dataset.original || p.innerText;
-      if (!p.dataset.original) p.dataset.original = text;
+    <p class="text-[11px] text-gray-400 max-w-3xl mx-auto leading-relaxed">
+      Disclaimer: Bharat Ipsum is a creative placeholder text generator inspired by Indian languages and culture.
+      It is not affiliated with, endorsed by, or representing any government or official body. Use at your own discretion.
+    </p>
+  </div>
+</footer>
 
-      const words = text.split(/\s+/);
-      const chunk = Math.ceil(words.length / 3);
 
-      const part1 = words.slice(0, chunk).join(' ');
-      const part2 = words.slice(chunk, chunk * 2).join(' ');
-      const part3 = words.slice(chunk * 2).join(' ');
 
-      p.innerHTML =
-        `<span class="tri-saffron">${part1}</span>` +
-        (part2 ? ` <span class="tri-white">${part2}</span>` : '') +
-        (part3 ? ` <span class="tri-green">${part3}</span>` : '');
-
-      p.classList.add('selected');
-    }
-
-    function highlightParagraphs() {
-      const count = parseInt(document.getElementById("paraCount").value, 10);
-      const paragraphs = document.querySelectorAll("#bharatText p");
-
-      // reset all
-      paragraphs.forEach(restoreParagraph);
-
-      if (!isNaN(count) && count > 0) {
-        for (let i = 0; i < count && i < paragraphs.length; i++) {
-          triColorizeParagraph(paragraphs[i]);
-        }
-      }
-    }
-
-    function copyText() {
-      const selected = Array.from(document.querySelectorAll("#bharatText p.selected"))
-        .map(p => (p.dataset.original || p.innerText).trim())
-        .join("\n\n");
-      if (selected) {
-        navigator.clipboard.writeText(selected);
-        alert("Selected text copied to clipboard!");
-      } else {
-        alert("Please select at least 1 paragraph.");
-      }
-    }
-  </script>
+  <script src="js/generator.js"></script>
+  <script src="js/quote.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
