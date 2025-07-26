@@ -19,6 +19,7 @@
 
   <link rel="canonical" href="https://bharatipsum.com/" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://db.onlinewebfonts.com/c/5ebc67ab9ab9e86517c65dd6ac7c85aa?family=Dauphin" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -50,11 +51,11 @@
 
   <!-- Header -->
   <header class="bg-gradient-to-r from-orange-500 to-red-500 text-white py-12 text-center">
-    <h1 class="text-4xl md:text-7xl font-bold">Bharat <span class="font-dauphin">Ipsum</span></h1>
-    <p class="text-lg mt-2 pb-4 max-w-2xl mx-auto">
-      Why settle for Latin when you can fill your designs with the spirit of India?
-      Bharat Ipsum soul of Indian languages, now in your placeholder text.
-    </p>
+  <h1 class="text-4xl md:text-7xl font-bold">Bharat <span class="font-dauphin">Ipsum</span></h1>
+  <p class="text-lg mt-2 pb-4 max-w-2xl mx-auto">
+    Why settle for Latin when you can fill your designs with the spirit of India?
+    Bharat Ipsum soul of Indian languages, now in your placeholder text.
+  </p>
 
   <!-- New Quote Section -->
 
@@ -103,12 +104,12 @@
           them is the same. Bharat Ipsum is playful, unpredictable, and proudly Indian. It's not meant to make sense,
           but to make you feel - just like the spirit of Bharat itself.
         </p>
-      </div>
+  </div>
       <!-- Right Section: Generator -->
-      <section id="generator" class="container mx-auto pl-2 pr-4 max-w-md">
+      <section id="generator" class="container mx-auto pl-2 max-w-md">
         <div class="generator-box">
           <h3 class="text-2xl font-semibold mb-4 text-gray-900">Bharat Ipsum Generator</h3>
-          <div class="flex flex-wrap items-center gap-3 mb-4">
+          <div class="flex items-center gap-2 flex-wrap mb-4">
             <input id="genCount" type="number" min="1" value="5" class="w-20 input-field" />
             <select id="genType" class="flex-grow input-field">
               <option value="paragraphs">Paragraphs</option>
@@ -116,7 +117,9 @@
               <option value="words">Words</option>
             </select>
             <button id="genBtn" class="btn-blue">Generate</button>
-            <button id="copyBtn" class="btn-green">Copy</button>
+            <button id="copyBtn" class="btn-icon" title="Copy to Clipboard">
+              <i class="fas fa-clipboard"></i>
+            </button>
           </div>
           <label class="flex items-center gap-2 mb-4 text-gray-700 text-sm">
             <input type="checkbox" id="startWith" class="h-4 w-4 text-orange-500" checked>

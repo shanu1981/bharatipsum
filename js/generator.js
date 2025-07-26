@@ -116,7 +116,21 @@ function generate() {
 
 function copyOutput() {
   const text = document.getElementById('genOutput').innerText.trim();
-  if (!text) return alert("Nothing to copy yet. Generate first!");
-  navigator.clipboard.writeText(text);
-  alert("Copied!");
+  const btn = document.getElementById('copyBtn');
+  if (!text) {
+    return;
+  }
+
+  navigator.clipboard.writeText(text).then(() => {
+    // Change icon to check
+    btn.innerHTML = '<i class="fas fa-check"></i>';
+    btn.title = "Copied!";
+
+    // Reset back to clipboard icon after 2 seconds or on hover
+    setTimeout(() => {
+      btn.innerHTML = '<i class="fas fa-clipboard"></i>';
+      btn.title = "Copy to Clipboard";
+    }, 2000);
+  });
 }
+
