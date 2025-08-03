@@ -68,7 +68,7 @@
   border-radius: 0.75rem;
   padding: 1.5rem;
   width: 100%;
-  max-width: 28rem;
+  max-width: 40rem;
   margin: 0 auto;
 }
 
@@ -99,6 +99,15 @@
   font-size: 0.8rem;
 }
 
+@media (max-width: 768px) {
+  #quoteSection {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .btn-icon {
   background-color: #36b37e;
   color: white;
@@ -115,4 +124,13 @@
 
 .btn-icon:hover {
   background-color: #16a34a;
+}
+
+.input-field:focus,
+select:focus,
+input[type="number"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #f97316;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.4);
 }

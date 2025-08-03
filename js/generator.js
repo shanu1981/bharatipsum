@@ -2,12 +2,12 @@ const START_PHRASE = "Bharat ipsum dolor sit amet, namaste adipiscing elit, sed 
 
 const wordPool = [
   "bharat", "ipsum", "dolor", "sit", "amet", "namaste", "adhyayan", "utsav", "seva", "utsah", "dhyanam",
-  "yogic", "shakti", "prana", "vayu", "swaraj", "satyam", "ahimsa", "vedanta", "sarovar", "rangoli", "vikas","chai", "kumbh",
+  "yogic", "shakti", "prana", "vayu", "swaraj", "satyam", "ahimsa", "vedanta", "sarovar", "rangoli", "vikas", "chai", "kumbh",
 
   // Telugu
   "chekkiligintalu", "chirutapuli", "saripoindhi", "bagunnara", "andhariki", "avunu", "kaadhu", "manchi",
   "eeroju", "Udayam", "sayantram", "bangaram", "thaskarinchuta", "gelupu", "thalupu", "gunde", "parugu",
-  "aavakaya", "guruvu", "brahmanandam",
+  "aavakaya", "guruvu",
 
   // Tamil
   "therukoothu", "pudhumai", "paalpayasam", "kolam", "ille", "aamaa", "oru",
@@ -16,8 +16,8 @@ const wordPool = [
 
   // Kannada
   "davangere", "avalakki", "nuchchu", "bisi", "uppittu",
-  "ragi", "mandya", "benne", "nudi", "koli", "keli", "beka", 
- "namaskara", "dayavittu", "haudu", "snehitha", "kshamisi", "hullu", "beda", "madhyahna",
+  "ragi", "mandya", "benne", "nudi", "koli", "keli", "beka",
+  "namaskara", "dayavittu", "haudu", "snehitha", "kshamisi", "hullu", "beda", "madhyahna",
   "jaya", "hegiddira", "channagidini", "yelli", "hogu", "oota", "gottilla", "jaasti",
 
   // Malayalam
@@ -96,23 +96,68 @@ function generate() {
   if (type === 'paragraphs') {
     for (let i = 0; i < count; i++) out.push(makeParagraph());
     if (startWith && out.length) out[0] = START_PHRASE + " " + out[0];
-    document.getElementById('genOutput').innerHTML = out.map(p => `<p>${p}</p>`).join('\n');
+    document.getElementById('genOutput').innerHTML = out.map(p => `<p style="margin-bottom: 1em;">${p}</p>`).join('');
   } else if (type === 'sentences') {
     for (let i = 0; i < count; i++) out.push(makeSentence());
     if (startWith) out[0] = START_PHRASE;
-    document.getElementById('genOutput').innerText = out.join(' ');
-  } else {
-    let wordsNeeded = count;
-    let acc = startWith ? [START_PHRASE] : [];
-    while (wordsNeeded > 0) {
-      const chunk = Math.min(wordsNeeded, 80);
-      acc.push(makeWords(chunk));
-      wordsNeeded -= chunk;
+    document.getElementById('genOutput').innerHTML = out.map(s => s + '<br>').join('');
+  } else if (type === 'words') {
+    let acc = [];
+
+    if (startWith) {
+      const startWords = START_PHRASE.trim().split(/\s+/);
+
+      if (startWords.length >= count) {
+        acc = startWords.slice(0, count);
+      } else {
+        acc = [...startWords];
+        let remaining = count - startWords.length;
+        while (remaining > 0) {
+          const chunk = Math.min(remaining, 80);
+          acc.push(...makeWords(chunk).split(/\s+/));
+          remaining = count - acc.length;
+        }
+        acc = acc.slice(0, count);
+      }
+    } else {
+      let wordsNeeded = count;
+      while (wordsNeeded > 0) {
+        const chunk = Math.min(wordsNeeded, 80);
+        acc.push(...makeWords(chunk).split(/\s+/));
+        wordsNeeded -= chunk;
+      }
+      acc = acc.slice(0, count);
     }
-    document.getElementById('genOutput').innerText = acc.join(' ');
+    acc[0] = acc[0].charAt(0).toUpperCase() + acc[0].slice(1);
+    acc[acc.length - 1] = acc[acc.length - 1].replace(/[,:;]+$/, '');
+    const final = acc.join(' ') + '.';
+    document.getElementById('genOutput').innerText = final;
+  }
+  else if (type === 'chars') {
+    let text = startWith ? START_PHRASE + ' ' : '';
+    while (text.length < count + 10) {
+      text += makeSentence() + ' ';
+    }
+    let sliced = text.slice(0, count);
+    if (sliced.endsWith(' ')) {
+      sliced = sliced.slice(0, -1) + rand("abcdefghijklmnopqrstuvwxyz".split(''));
+    }
+    document.getElementById('genOutput').innerText = sliced;
+  } else if (type === 'list') {
+    for (let i = 0; i < count; i++) out.push(makeSentence());
+    if (startWith) out[0] = START_PHRASE;
+    document.getElementById('genOutput').innerHTML = out.map((item, i) => {
+      const prefix = '• ';
+      const suffix = i === out.length - 1 ? '' : '<br>';
+      return `${prefix}${item}${suffix}`;
+    }).join('');
+  }
+  else if (type === 'number') {
+    for (let i = 1; i <= count; i++) out.push(`<li>${i}. ${makeSentence()}</li>`);
+    if (startWith) out[0] = `<li>1. ${START_PHRASE}</li>`;
+    document.getElementById('genOutput').innerHTML = `<ol>${out.join('\n')}</ol>`;
   }
 }
-
 
 function copyOutput() {
   const text = document.getElementById('genOutput').innerText.trim();
@@ -122,15 +167,12 @@ function copyOutput() {
   }
 
   navigator.clipboard.writeText(text).then(() => {
-    // Change icon to check
     btn.innerHTML = '<i class="fas fa-check"></i>';
     btn.title = "Copied!";
 
-    // Reset back to clipboard icon after 2 seconds or on hover
     setTimeout(() => {
       btn.innerHTML = '<i class="fas fa-clipboard"></i>';
       btn.title = "Copy to Clipboard";
     }, 2000);
   });
 }
-
