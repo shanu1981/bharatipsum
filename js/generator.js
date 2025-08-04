@@ -39,9 +39,9 @@ const wordPool = [
   "puchka", "rosogolla", "sandesh", "paturi", "ghugni",
   "aðvata", "manush", "kukur", "shomudro", "jol",
 
-  // Punjabi / Urdu-inflected Hindi (Desi)
+  // Punjabi / Urdu-inflected Hindi
   "loṭā", "jhoothā", "pagṛī", "ṭharrā", "jhuggī",
-  "ṭhakkar", "gaṛbaṛ", "phusphusānā", "jhandā", "bakbak",
+  "ṭhakkar", "gaṛbaṛ", "phusphusānā", "bakbak",
 
   // Gujarati / Odia / Punjabi mix
   "chatori", "dhandhā", "kachchhep", "veṭṭaka", "pokhari",
